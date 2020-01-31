@@ -329,6 +329,8 @@ function init_my_config_scripts(){
 	// Регистрирую стили
 	wp_enqueue_style( 'bootstrap4.min', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false);
 	wp_enqueue_style( 'customise', get_template_directory_uri() . '/css/customise.css', array(), false);
+	wp_enqueue_style( 'customise-576', get_template_directory_uri() . '/css/customise-576.css', array(), false);
+	wp_enqueue_style( 'customise-768', get_template_directory_uri() . '/css/customise-768.css', array(), false);
 	// Регистируем файл с JS скриптом
 	wp_register_script( 'jQuery', get_template_directory_uri() . '/js/jQuery.js', array(), false);
 	wp_register_script( 'bootstrap4js.min', get_template_directory_uri() . '/js/bootstrap.min.js', array(), false);
@@ -347,3 +349,11 @@ function init_my_config_scripts(){
 
 // Добавляем action для запуска этой функции
 add_action( 'wp_enqueue_scripts', 'init_my_config_scripts', 1 );
+
+add_filter( 'excerpt_length', function(){
+	return 10;
+} );
+add_filter('excerpt_more', function($more) {
+	global $post;
+	return '..<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><a style="float:right" href="'. get_permalink($post) . '">читать полностью</a></div>';
+});

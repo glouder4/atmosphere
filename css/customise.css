@@ -1,0 +1,36 @@
+#masthead>div>div>h1{
+	font-family: "Intro Bold";
+}
+
+#element_1{
+	height: 100vh;
+	background-image: url(../images/element_bg1.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+#directions{
+	min-height: 250px;
+}
+#masthead{
+	height:150px;
+	padding: 25px;
+	transition: all .3s ease;
+	background-color: #fff;
+}
+#masthead.out {
+	transform: translateY(-100%);
+}
+
+#wpadminbar{
+	display: none;
+}
+
+footer{
+	min-height: 150px;
+	background-image: url(../images/element_bg1.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}

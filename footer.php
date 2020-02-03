@@ -15,30 +15,19 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
-		<div class="site-info">
-			<?php $blog_info = get_bloginfo( 'name' ); ?>
-			
+	<footer id="colophon" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0">
+		<div id="register_form" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 wow fadeInUp">
+			<h2>Зарегистрируйтесь на мероприятие</h2>
 			<?php
-			if ( function_exists( 'the_privacy_policy_link' ) ) {
-				the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
-			}
+				echo do_shortcode( '[contact-form-7 id="41" title="Регистрация"]' );
 			?>
-			<?php if ( has_nav_menu( 'footer' ) ) : ?>
-				<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'twentynineteen' ); ?>">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'menu_class'     => 'footer-menu',
-							'depth'          => 1,
-						)
-					);
-					?>
-				</nav><!-- .footer-navigation -->
-			<?php endif; ?>
-		</div><!-- .site-info -->
+		</div>
+		<img class="wow fadeInDown" src="/wp-content/themes/twentynineteen/images/footer.jpg" alt="">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h4><a href="tel:+79625328444">+7-962-532-84-44</a></h4>
+			<h4>team@atmosphere.ru</h4>
+			<h4><a href="atmosphere.team">atmosphere.team</a></h4>
+		</div>
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->

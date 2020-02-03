@@ -1,53 +1,53 @@
 <?php
 /**
- * The main template file
+ * The template for displaying all single posts
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
  * @subpackage Twenty_Nineteen
  * @since 1.0.0
  */
+
 get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main">
-			<div id="element_2" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 wow fadeInRight">
-				<div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 p-0 mx-auto">
-					<h2>Направления</h2>
-					<h3>
-						Здесь представлен слайдер из направлений (Записи -> Создать новую -> Название+Рубрика: "направления")
-					</h3>
-				</div>
-			</div>
+		<main id="main" class="site-main">			
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
+
+				get_template_part( 'template-parts/content/content', 'single' );
+
+
+			endwhile; // End of the loop.
+			?>
+<!-- Работает как надо -->
 			<div id="directions" class="carousel slide" data-ride="carousel">
 			  	<div class="container">
 			  		<div class="carousel-inner col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-			  		 	<?php
-								if ( have_posts() ) {
-									query_posts('category_name=направления&showposts=100');
-									// Load posts loop.
-									while ( have_posts() ) {
-										the_post();
-										get_template_part( 'template-parts/content/content' );
-									}
-			
-									// Previous/next page navigation.
-									twentynineteen_the_posts_navigation();
-			
-								} else {
-			
-									// If no content, include the "No posts found" template.
-									get_template_part( 'template-parts/content/content', 'none' );
-			
-								}
-							?>
+			  		 	<?php 
+			  		 	$keysTitle = 'category_name='.get_the_title().':кейс&showposts=100';
+			  									if ( have_posts() ) {
+			  										query_posts($keysTitle);
+			  										// Load posts loop.
+			  										while ( have_posts() ) {
+			  											the_post();
+			  											get_template_part( 'template-parts/content/content' );
+			  										}
+			  				
+			  										// Previous/next page navigation.
+			  										twentynineteen_the_posts_navigation();
+			  				
+			  									} else {
+			  				
+			  										// If no content, include the "No posts found" template.
+			  										get_template_part( 'template-parts/content/content', 'none' );
+			  				
+			  									}
+			  								?>
 			  		</div>
 			  		<a class="carousel-control-prev" href="#directions" role="button" data-slide="prev">
 			  		  <i class="fas fa-arrow-left" aria-hidden="true"></i>
@@ -57,9 +57,10 @@ get_header();
 			  		</a>
 			  	</div>
 			</div>
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
-	<script type="text/javascript">
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+<script type="text/javascript">
 		$(document).ready(function(){
 			let count = 0;
 			let countOfRows = 0;
@@ -68,7 +69,6 @@ get_header();
 			$('#directions>.container>.carousel-inner')[0].innerHTML += '<div class="carousel-item active"><div class="row justify-content-center"></div></div>';
 			let countOfArticles = $('#directions>.container>.carousel-inner>article').length-1;
 			for(var i =0;i <= countOfArticles;i++){
-				console.log(count);
 				if(count == 2){
 					countOfRows++;
 					classList = $('#directions>.container>.carousel-inner')[0].children[i].className;
@@ -89,6 +89,5 @@ get_header();
 			for(var i =0;i <= countOfArticles;i++)$('#directions>.container>.carousel-inner>article')[0].remove();
 		})
 	</script>
-
 <?php
 get_footer();

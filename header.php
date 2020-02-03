@@ -11,7 +11,7 @@
  * @since 1.0.0
  */
 ?><!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="m-0">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,14 +21,14 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+	<nav id="pageHeader" class="navbar navbar-expand-md navbar-light col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 fixed-top row m-0">
 		  		<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>	
 		  	
 		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		  	  <span class="navbar-toggler-icon"></span>
 		  	</button>
 		  	
-		  	<div class="collapse navbar-collapse col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 justify-content-end" id="navbarSupportedContent">
+		  	<div class="collapse navbar-collapse col-4 col-sm-4 col-md-6 col-lg-6 col-xl-6 mb-0 justify-content-end" id="navbarSupportedContent">
 		  	 <?php if ( has_nav_menu( 'menu-1' ) ) : ?>
 		  					<?php
 		  							wp_nav_menu(
@@ -47,5 +47,6 @@
 			$('nav>.navbar-collapse>.main-menu-more').remove();
 		})
 	</script>
-
+	<div id="element_1" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			</div>
 	<div id="content" class="site-content">

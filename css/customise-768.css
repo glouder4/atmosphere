@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+	.navbar{
+		height: auto;
+	}
+	.carousel-item>div>article{
+		text-align: center;
+	}
+	footer>img{
+		height: 250px;
+	}
+	#directions{
+		height:580px;
+	}
+}

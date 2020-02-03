@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 new WOW().init();
-var header = $('#masthead'),
+var header = $('#pageHeader'),
 	scrollPrev = 0;
 	$(window).scroll(function() {
 		var scrolled = $(window).scrollTop();

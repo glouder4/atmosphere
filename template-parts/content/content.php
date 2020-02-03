@@ -11,7 +11,18 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php
+
+$articleClasses = array(
+'col-12',
+'col-sm-12',
+'col-md-12',
+'col-lg-12',
+'col-xl-12',
+);
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class($articleClasses); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
@@ -29,7 +40,7 @@
 
 	<div class="entry-content">
 		<?php
-		the_content(
+		the_excerpt(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Post title. Only visible to screen readers. */
@@ -52,8 +63,4 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php twentynineteen_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

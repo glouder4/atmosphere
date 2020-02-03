@@ -328,6 +328,7 @@ require get_template_directory() . '/inc/customizer.php';
 function init_my_config_scripts(){
 	// Регистрирую стили
 	wp_enqueue_style( 'bootstrap4.min', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false);
+	wp_enqueue_style( 'mdb.lite.min', get_template_directory_uri() . '/css/mdb.lite.min.css', array(), false);
 	wp_enqueue_style( 'customise', get_template_directory_uri() . '/css/customise.css', array(), false);
 	wp_enqueue_style( 'customise-576', get_template_directory_uri() . '/css/customise-576.css', array(), false);
 	wp_enqueue_style( 'customise-768', get_template_directory_uri() . '/css/customise-768.css', array(), false);

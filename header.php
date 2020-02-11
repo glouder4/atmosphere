@@ -28,7 +28,7 @@
 		  	  <span class="navbar-toggler-icon"></span>
 		  	</button>
 		  	
-		  	<div class="collapse navbar-collapse col-4 col-sm-4 col-md-6 col-lg-6 col-xl-6 mb-0 justify-content-end" id="navbarSupportedContent">
+		  	<div class="collapse navbar-collapse col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-0 justify-content-end" id="navbarSupportedContent">
 		  	 <?php if ( has_nav_menu( 'menu-1' ) ) : ?>
 		  					<?php
 		  							wp_nav_menu(

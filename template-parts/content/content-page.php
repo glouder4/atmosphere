@@ -8,10 +8,16 @@
  * @subpackage Twenty_Nineteen
  * @since 1.0.0
  */
-
+$articleClasses = array(
+'col-12',
+'col-sm-12',
+'col-md-12',
+'col-lg-12',
+'col-xl-12',
+);
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class($articleClasses); ?>>
 	<?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
 	<header class="entry-header">
 		<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
@@ -20,7 +26,7 @@
 
 	<div class="entry-content">
 		<?php
-		the_content();
+		the_excerpt();
 
 		wp_link_pages(
 			array(

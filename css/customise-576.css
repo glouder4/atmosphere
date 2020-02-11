@@ -1,3 +1,18 @@
-@media (max-width: 576px) {
-	
+@media (min-width: 400px) and (max-width: 576px) {
+	#directions>.container>.carousel-inner>.carousel-item>div>div>img {
+	    width: 150px;
+	    height: 150px;
+	}
+	#directions {
+	    height: auto;
+	}
+	#directions>.container>.carousel-inner>.carousel-item>div>div>article>header>h2,#element_2>div>h2,footer>#register_form>h2 {
+	    font-size: 90%;
+	}
+	#directions>.container>.carousel-inner>.carousel-item>div>div>article>.entry-content,#element_2>div>h3{
+		font-size: 80%;
+	}
+	footer>img {
+		height:150px;
+	}
 }

@@ -329,13 +329,17 @@ function init_my_config_scripts(){
 	// Регистрирую стили
 	wp_enqueue_style( 'bootstrap4.min', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false);
 	wp_enqueue_style( 'mdb.lite.min', get_template_directory_uri() . '/css/mdb.lite.min.css', array(), false);
+	wp_enqueue_style( 'roadmapcss', get_template_directory_uri() . '/css/roadmap.min.css', array(), false);
 	wp_enqueue_style( 'customise', get_template_directory_uri() . '/css/customise.css', array(), false);
+	wp_enqueue_style( 'customise-400', get_template_directory_uri() . '/css/customise-400.css', array(), false);
 	wp_enqueue_style( 'customise-576', get_template_directory_uri() . '/css/customise-576.css', array(), false);
 	wp_enqueue_style( 'customise-768', get_template_directory_uri() . '/css/customise-768.css', array(), false);
+	wp_enqueue_style( 'pageCustomise', get_template_directory_uri() . '/css/pageCustomise.css', array(), false);
 	// Регистируем файл с JS скриптом
 	wp_register_script( 'jQuery', get_template_directory_uri() . '/js/jQuery.js', array(), false);
 	wp_register_script( 'bootstrap4js.min', get_template_directory_uri() . '/js/bootstrap.min.js', array(), false);
 	wp_register_script( 'popper.min', get_template_directory_uri() . '/js/popper.min.js', array(), false);
+	wp_register_script( 'roadmap', get_template_directory_uri() . '/js/roadmap.js', array(), false);
 	wp_register_script( 'mdb.min', get_template_directory_uri() . '/js/mdb.min.js', array(), false);
 	wp_register_script( 'main', get_template_directory_uri() . '/js/main.js', array(), false);
 
@@ -343,6 +347,7 @@ function init_my_config_scripts(){
 	wp_enqueue_script( 'jQuery');
 	wp_enqueue_script( 'bootstrap4js.min');
 	wp_enqueue_script( 'popper.min');
+	wp_enqueue_script( 'roadmap');
  	wp_enqueue_script( 'fontawesomeAll.min');
  	wp_enqueue_script( 'mdb.min');
  	wp_enqueue_script( 'main');

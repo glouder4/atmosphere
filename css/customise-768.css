@@ -1,7 +1,4 @@
-@media (max-width: 768px) {
-	.navbar{
-		height: auto;
-	}
+@media (min-width: 576px) and (max-width: 768px) {
 	.carousel-item>div>article{
 		text-align: center;
 	}
@@ -10,5 +7,21 @@
 	}
 	#directions{
 		height:580px;
+	}
+	#directions>.container>.carousel-inner>.carousel-item>div>div>img {
+	    width: 150px;
+	    height: 150px;
+	}
+	#directions {
+	    height: auto;
+	}
+	#element_first>div>h2,#directions>.container>.carousel-inner>.carousel-item>div>div>article>header>h2,#element_2>div>h2,footer>#register_form>h2 {
+	    font-size: 90%;
+	}
+	#directions>.container>.carousel-inner>.carousel-item>div>div>article>.entry-content,#element_2>div>h3{
+		font-size: 80%;
+	}
+	footer>img {
+		height:200px;
 	}
 }

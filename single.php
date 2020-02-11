@@ -9,7 +9,7 @@
  * @since 1.0.0
  */
 
-get_header();
+get_header('anypageheader');
 ?>
 
 	<div id="primary" class="content-area">
@@ -26,9 +26,11 @@ get_header();
 			?>
 <!-- Работает как надо -->
 			<div id="directions" class="carousel slide" data-ride="carousel">
+				<h3>Доступные кейсы по данному направлению</h3>
 			  	<div class="container">
 			  		<div class="carousel-inner col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 			  		 	<?php 
+			  		 	$pageTitle = get_the_title();
 			  		 	$keysTitle = 'category_name='.get_the_title().':кейс&showposts=100';
 			  									if ( have_posts() ) {
 			  										query_posts($keysTitle);
@@ -87,6 +89,9 @@ get_header();
 				id = '';
 			}
 			for(var i =0;i <= countOfArticles;i++)$('#directions>.container>.carousel-inner>article')[0].remove();
+			if($('#directions>.container>.carousel-inner>.carousel-item>.row')[0].innerHTML == ""){
+				$('#directions').hide();
+			}
 		})
 	</script>
 <?php

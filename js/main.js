@@ -12,5 +12,4 @@ var header = $('#pageHeader'),
 		}
 		scrollPrev = scrolled;
 	});
-
 })

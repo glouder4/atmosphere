@@ -1,7 +1,26 @@
 #main>article{
 	text-align: center;
 }
-#directions>.container>.carousel-inner>.carousel-item>div>div>img{
-	width:225px;
-	height:225px;
+#main>article>div>div>figure,#main>article>div>figure{
+	margin-left: auto;
+	margin-right: auto;
+}
+#main>article>header{
+	margin-top:15px;
+}
+#main>article>div>p{
+	font-size: 80%;
+	margin-top:0;
+}
+#directions{
+	border-top: 1px solid rgb(41,37,99);
+	text-align: center;
+	padding-top: 25px;
+}
+#directions>h3{
+	font-size: 90%;
+}
+#directions>.container>.carousel-inner>.carousel-item>div>div>img,#main>article>div>div>figure,#main>article>div>figure>img{
+	width:150px;
+	height:150px;
 }

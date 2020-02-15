@@ -2,6 +2,11 @@
 	#pageHeader>.site-branding>.row>.site-logo{
 		padding: 0;
 	}
+	#element_1{
+		height: 170px;
+		background-size: 100% auto;
+		margin-top: 120px;
+	}
 	#pageHeader>.site-branding>.row>.site-title{
 		font-size: 90%;
 		padding:0;
@@ -17,11 +22,27 @@
 	#directions {
 	    height: auto;
 	}
-	#directions>.container>.carousel-inner>.carousel-item>div>div>article>.entry-content,#element_2>div>h3{
-		font-size: 80%;
+	#howIcanParticipate>div>.col-12>.col-lg-3{
+		background-position: center;
 	}
-	#directions>.container>.carousel-inner>.carousel-item>div>div>article>header>h2,#element_2>div>h2,footer>#register_form>h2 {
-	    font-size: 90%;
+	#howIcanParticipate>div>.col-12>.col-lg-9{
+		text-align: center;
+	}
+	#directions>div>article{
+		margin-bottom: 15px;
+		height:280px;
+	}
+	#directions>div>article:first-child{
+		margin-right:0;
+	}
+	#directions>div>article:last-child{
+		margin:0;
+	}
+	.front_side>h2{
+		margin-top:25%;
+	}
+	#directions>div>article .back_side{
+		font-size: 90%;
 	}
 	#howIcanParticipate>div>div>div>h3{
 		font-size: 110%;
@@ -29,10 +50,41 @@
 	#howIcanParticipate>div>div>div>h4{
 		font-size: 80%;
 	}
-	footer>#register_form>div>form>p>span>input{
+
+	#roadmapAreas>ol:after,#roadmapAreas>ol>li:before,#roadmapAreas>ol>li:after{
+		left:20%;
+	}
+	#roadmapAreas>ol>li:nth-child(odd):after{
+		left:32%;
+	}
+	#roadmapAreas>ol>li .event{
+		top:0;
+		width:80%;
+	}
+	#roadmapAreas>ol>li:nth-child(odd) .event{
+		margin-left: 15%;
+		margin-top:-15px;
+	}
+	#roadmapAreas>ol>li:nth-child(even) .event{
+		left: 15%;
+	}
+	#roadmapAreas>ol>li:nth-child(odd) .event,#roadmapAreas>ol>li:nth-child(even) .event{
+		margin-top:-15px;
+	}
+	#roadmap>ol>li:last-child>.event{
+		padding-left: 15px;
+	}
+	#roadmap>ol>li>.event:hover{
+		transform: scale(1);
+	}
+	#news>div{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	footer>#register_form>div>form>p>span>input,#areas{
 		width: 250px;
 	}
-	footer>img {
+	footer>img{
 		height:150px;
 	}
 }

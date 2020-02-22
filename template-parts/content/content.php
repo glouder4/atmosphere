@@ -19,11 +19,12 @@ $articleClasses = array(
 'col-md-12',
 'col-lg-12',
 'col-xl-12',
+'align-self-center'
 );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class($articleClasses); ?>>
-	<header class="entry-header">
+	<header class="entry-header front_side">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
 			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'twentynineteen' ) );
@@ -31,14 +32,14 @@ $articleClasses = array(
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
-			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+			the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h3>' );
 		endif;
 		?>
 	</header><!-- .entry-header -->
 
 	<?php twentynineteen_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content back_side">
 		<?php
 		the_excerpt(
 			sprintf(

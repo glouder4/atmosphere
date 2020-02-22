@@ -7,7 +7,7 @@
  * @since 1.0.0
  */
 ?>
-<div class="site-branding navbar-brand col-8 col-sm-8 col-md-6 col-lg-6 col-xl-6 mr-0 p-0">
+<div class="site-branding navbar-brand col-8 col-sm-8 col-md-4 col-lg-4 col-xl-4 mr-0 p-0">
 	<div class="row mr-0 ml-0">		
 		<?php if ( has_custom_logo() ) : ?>
 			<div class="site-logo col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3"><?php the_custom_logo(); ?></div>

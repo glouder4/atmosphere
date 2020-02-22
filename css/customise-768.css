@@ -5,23 +5,60 @@
 	footer>img{
 		height: 250px;
 	}
-	#directions{
-		height:580px;
+	#howIcanParticipate>div>.col-12>.col-lg-9{
+		text-align: center;
 	}
-	#directions>.container>.carousel-inner>.carousel-item>div>div>img {
-	    width: 150px;
-	    height: 150px;
+	#directions>div>article{
+		margin-bottom: 15px;
 	}
-	#directions {
-	    height: auto;
+	#directions>div>article:first-child{
+		margin-right:0;
 	}
-	#element_first>div>h2,#directions>.container>.carousel-inner>.carousel-item>div>div>article>header>h2,#element_2>div>h2,footer>#register_form>h2 {
-	    font-size: 90%;
+	#directions>div>article:last-child{
+		margin:0;
 	}
-	#directions>.container>.carousel-inner>.carousel-item>div>div>article>.entry-content,#element_2>div>h3{
-		font-size: 80%;
+	#HowIcanWin>div>img{
+		margin-top:50%;
 	}
+
+	#roadmapAreas>ol:after,#roadmapAreas>ol>li:before,#roadmapAreas>ol>li:after{
+		left:20%;
+	}
+	#roadmapAreas>ol>li:nth-child(odd):after{
+		left:28%;
+	}
+	#roadmapAreas>ol>li .event{
+		top:0;
+		width:80%;
+	}
+	#roadmapAreas>ol>li:nth-child(odd) .event{
+		margin-left: 15%;
+	}
+	#roadmapAreas>ol>li:nth-child(even) .event{
+		left: 15%;
+	}
+	#roadmapAreas>ol>li:nth-child(odd) .event,#roadmapAreas>ol>li:nth-child(even) .event{
+		margin-top:-15px;
+	}
+
 	footer>img {
 		height:200px;
+	}
+	#howIcanParticipate{
+		margin-top: 15px;
+	}
+}
+@media (min-width: 768px) and (max-width: 841px){
+	#directions>div>article{
+		margin-bottom: 15px;
+	}
+	#directions>div>article:first-child{
+		margin-right:0;
+	}
+	#directions>div>article:last-child{
+		margin:0;
+	}
+	#howIcanParticipate{
+		margin-top: 15px;
 	}
 }

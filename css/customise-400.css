@@ -15,6 +15,13 @@
 		padding-left: 8px;
 		padding-right: 8px;
 	}
+	#aboutProject>div>p,#aboutProject>div>ul>li{
+		font-size: 17px;
+	}
+	#ProjectCamp>p{
+		font-size: 60%;
+		text-align: justify;
+	}
 	#directions>.container>.carousel-inner>.carousel-item>div>div>img {
 	    width: 100px;
 	    height: 100px;
@@ -44,6 +51,12 @@
 	#directions>div>article .back_side{
 		font-size: 90%;
 	}
+	#directions_info>div>div>div,#directions_info>div>div,#directions_info>div{
+		padding: 0;
+	}
+	#directions_info>div>div>div>h3{
+		font-size: 110%;
+	}
 	#howIcanParticipate>div>div>div>h3{
 		font-size: 110%;
 	}
@@ -52,21 +65,21 @@
 	}
 
 	#roadmapAreas>ol:after,#roadmapAreas>ol>li:before,#roadmapAreas>ol>li:after{
-		left:20%;
+		left:10%;
 	}
 	#roadmapAreas>ol>li:nth-child(odd):after{
-		left:32%;
+		left:22%;
 	}
 	#roadmapAreas>ol>li .event{
 		top:0;
 		width:80%;
 	}
 	#roadmapAreas>ol>li:nth-child(odd) .event{
-		margin-left: 15%;
+		margin-left: 25%;
 		margin-top:-15px;
 	}
 	#roadmapAreas>ol>li:nth-child(even) .event{
-		left: 15%;
+		left: 25%;
 	}
 	#roadmapAreas>ol>li:nth-child(odd) .event,#roadmapAreas>ol>li:nth-child(even) .event{
 		margin-top:-15px;
@@ -80,6 +93,17 @@
 	#news>div{
 		padding-left: 5px;
 		padding-right: 5px;
+	}
+	#news>div>header{
+		font-size: 50%;
+		text-align: left;
+	}
+	#news>div>div{
+		font-size: 60%;
+		text-align: left;
+	}
+	#news>div>div>div{
+		text-align: center;
 	}
 	footer>#register_form>div>form>p>span>input,#areas{
 		width: 250px;

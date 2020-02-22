@@ -16,9 +16,10 @@
 $articleClasses = array(
 'col-12',
 'col-sm-12',
-'col-md-10',
-'col-lg-10',
-'col-xl-10'
+'col-md-6',
+'col-lg-4',
+'col-xl-4',
+'mx-auto'
 );
 ?>
 
@@ -40,7 +41,7 @@ $articleClasses = array(
 
 	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 		<?php
-		the_content(
+		the_excerpt(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Post title. Only visible to screen readers. */
